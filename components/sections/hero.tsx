@@ -169,11 +169,11 @@ export default function Hero({ data, socials }: HeroProps) {
                   <span className="sr-only">LinkedIn</span>
                 </Button>
               </Link>
-              <Link href={socials.portfolio} target="_blank" rel="noopener noreferrer">
+              <Link href={socials.resume} target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="icon" className="hover:animate-wiggle h-10 w-10 sm:h-12 sm:w-12 rounded-full border-2 border-purple-200 dark:border-purple-800 hover:border-purple-400 dark:hover:border-purple-400 transition-colors group relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-500 dark:to-indigo-500 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
                   <ExternalLink className="h-5 w-5 sm:h-6 sm:w-6 relative z-10 text-purple-800 dark:text-purple-300 group-hover:text-white transition-colors duration-300" />
-                  <span className="sr-only">Portfolio</span>
+                  <span className="sr-only">Resume</span>
                 </Button>
               </Link>
             </motion.div>

@@ -2,12 +2,14 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X, Star, User, GraduationCap, Briefcase, Code2, Trophy, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "./mode-toggle"
 import { cn } from "@/lib/utils"
 import { handleSmoothScroll } from "@/lib/utils"
 import { usePathname } from "next/navigation"
+import { personalData } from "@/data/personal-data"
 
 const navItems = [
   { name: "Home", href: "#home", icon: Star },
@@ -25,6 +27,7 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home")
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
+  const profileImage = personalData.personalDetails.profileImage || "/heroImage.png"
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,7 +73,16 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 flex items-center gap-3">
+            <div className="relative w-8 h-8 rounded-full overflow-hidden border-2 border-purple-300 dark:border-purple-700 shadow-md">
+              <Image 
+                src={profileImage} 
+                alt="Profile"
+                fill
+                className="object-cover"
+                sizes="32px"
+              />
+            </div>
             <Link 
               href="/" 
               className="text-3xl font-kawai text-purple-800 dark:text-purple-400 tracking-widest hover:animate-wiggle relative group"
@@ -126,13 +138,24 @@ export default function Navbar() {
         <div className="md:hidden fixed inset-0 bg-black/30 dark:bg-black/50 backdrop-blur-sm z-40">
           <div className="absolute top-0 left-0 right-0 bg-purple-50/95 dark:bg-gray-800/95 backdrop-blur-lg border-b border-purple-100 dark:border-gray-700">
             <div className="flex items-center justify-between px-4 py-3">
-              <Link 
-                href="/" 
-                className="text-2xl font-kawai text-purple-800 dark:text-purple-400 tracking-widest hover:animate-wiggle relative group"
-              >
-                <span className="relative z-10 font-anime">ROSHAN</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-indigo-400/20 dark:from-purple-500/20 dark:to-indigo-500/20 blur-lg group-hover:animate-glow"></span>
-              </Link>
+              <div className="flex items-center gap-2">
+                <div className="relative w-7 h-7 rounded-full overflow-hidden border-2 border-purple-300 dark:border-purple-700 shadow-md">
+                  <Image 
+                    src={profileImage} 
+                    alt="Profile"
+                    fill
+                    className="object-cover"
+                    sizes="28px"
+                  />
+                </div>
+                <Link 
+                  href="/" 
+                  className="text-2xl font-kawai text-purple-800 dark:text-purple-400 tracking-widest hover:animate-wiggle relative group"
+                >
+                  <span className="relative z-10 font-anime">ROSHAN</span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-indigo-400/20 dark:from-purple-500/20 dark:to-indigo-500/20 blur-lg group-hover:animate-glow"></span>
+                </Link>
+              </div>
               <Button
                 variant="ghost"
                 size="icon"

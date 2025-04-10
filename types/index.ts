@@ -30,7 +30,7 @@ export interface Experience {
 
 export interface WebProject {
   name: string
-  description: string
+  description: string[]
   techStack: string[]
   demo?: string
   github?: string
@@ -39,7 +39,7 @@ export interface WebProject {
 
 export interface MLProject {
   name: string
-  description: string
+  description: string[]
   techStack: string[]
   demo?: string
   github?: string
@@ -73,4 +73,5 @@ export interface Socials {
   leetcode: string
   peerlist: string
   portfolio: string
+  resume: string
 }

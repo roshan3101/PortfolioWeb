@@ -164,7 +164,30 @@ export default function Projects({ webProjects, mlProjects }: ProjectsProps) {
                 )}
                 <div className="p-6">
                   <h3 className="text-xl font-questwin font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">{project.name}</h3>
-                  <p className="text-muted-foreground mb-4 text-sm">{project.description}</p>
+                  
+                  {Array.isArray(project.description) ? (
+                    <ul className="text-muted-foreground mb-4 text-sm space-y-1 pl-4 list-disc marker:text-indigo-500 dark:marker:text-indigo-400">
+                      {project.description.map((item, i) => {
+                        const gradientIndex = (i) % 5;
+                        const gradients = [
+                          "from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400",
+                          "from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400",
+                          "from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400",
+                          "from-cyan-600 to-blue-600 dark:from-cyan-400 dark:to-blue-400",
+                          "from-violet-600 to-indigo-600 dark:from-violet-400 dark:to-indigo-400"
+                        ];
+                        return (
+                          <li key={i} className="text-sm">
+                            <span className={`bg-clip-text text-transparent bg-gradient-to-r ${gradients[gradientIndex]}`}>
+                              {item}
+                            </span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  ) : (
+                    <p className="text-muted-foreground mb-4 text-sm">{project.description}</p>
+                  )}
 
                   <div className="flex flex-wrap gap-1.5 mb-4">
                     {project.techStack.map((tech, i) => {

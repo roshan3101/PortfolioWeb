@@ -14,12 +14,12 @@ export const personalData = {
     name: "Roshan Kumar Sahu",
     title: "Full-Stack Web Developer | AI/ML Engineer | Data Analyst",
     about:
-      "B.Tech student at IIIT Una in Electronics and Communication Engineering with a strong foundation in full-stack development, machine learning, and AI. Passionate about building scalable and impactful solutions. Skilled in both frontend and backend technologies, ML modeling, and data-driven insights.",
+      "With a strong foundation in software development and an eye for scalable, impactful solutions, I thrive at the intersection of technology and innovation. I specialize in building end-to-end web applications and crafting intelligent systems using machine learning and deep learning techniques. From deploying production-grade full-stack platforms to designing ML models for real-world problems, I bring a problem-solving mindset and a product-oriented approach to every project I undertake.",
     email: "igniterofficial909505@gmail.com",
     phone: "+91-8102051183",
     location: "India",
-    resumeLink: "https://example.com/resume.pdf",
-    profileImage: "https://example.com/profile.jpg",
+    resumeLink: "https://drive.google.com/file/d/1Pk5NXCGgSIw_BtuURbFtg0lEM5riFDth/view?usp=sharing",
+    profileImage: "/projects/profile.jpg",
   } as PersonalDetails,
 
   education: [
@@ -80,77 +80,107 @@ export const personalData = {
     web: [
       {
         name: "Slimnastics",
-        description:
-          "Full-stack gym management platform with admin dashboard, user tracking, e-commerce integration, and content engagement.",
+        description: [
+          "Full-stack gym management platform",
+          "Admin dashboard with analytics and control",
+          "User tracking and attendance system",
+          "Integrated e-commerce for supplements and plans",
+          "Blog/content section to boost user engagement"
+        ],
         techStack: ["React", "Express", "MongoDB", "Node.js", "JWT"],
         demo: "https://slimnastics.vercel.app",
-        github: "https://github.com/Igniter-909/Slimnastics",
+        github: "https://github.com/roshan3101/Slimnastics",
         image: "/projects/gym.png"
       },
       {
         name: "Translingo - Chat App",
-        description: "Real-time chat app with file sharing, cloud-based storage, and secure authentication.",
+        description: [
+          "Real-time chat application using Socket.io",
+          "Supports file sharing and secure messaging",
+          "Cloud-based storage with Multer and Cloudinary",
+          "Robust authentication and user management"
+        ],
         techStack: ["React", "Socket.io", "MongoDB", "Node.js", "Multer", "Cloudinary"],
         demo: "https://translingo-mu.vercel.app",
-        github: "https://github.com/Igniter-909/Translingo",
+        github: "https://github.com/roshan3101/Translingo",
         image:"/projects/translingo.png"
       },
       {
-        name: "Portfolio Website",
-        description:
-          "Interactive personal portfolio website with EmailJS integration, built using React and deployed via Vercel.",
-        techStack: ["React", "TypeScript", "Tailwind CSS", "EmailJS"],
-        demo: "https://www.roshan909.live",
-        github: "https://github.com/Igniter-909/Portfolio",
-        image: "/projects/portfolio.png"
+        name: "IntelliScrape",
+        description: [
+          "No-code platform for web automation and data scraping",
+          "Visual workflow builder with drag-and-drop UI",
+          "Supports multiple task types and API integration",
+          "Scheduled executions, real-time monitoring, credit system",
+          "Secure credential management and detailed analytics"
+        ],
+        techStack: ["React", "Node.js", "Prisma", "SQLite", "Tailwind CSS"],
+        demo: "https://intelliscrape.vercel.app",
+        github: "https://github.com/roshan3101/IntelliScrape",
+        image: "/projects/intelliscrape.png"
       },
+      {
+        "name": "ShadowNet",
+        "description": [
+          "Cybersecurity platform for detecting APT (Advanced Persistent Threat) attacks, phishing attempts, and zero-day vulnerabilities.",
+          "Performs deep network scans, intrusion detection, and anomaly analysis using machine learning.",
+          "Provides a real-time dashboard with visualizations of threats, alerts, and system logs.",
+          "Implements modules for packet capture, protocol inspection, and threat intelligence integration.",
+        ],
+        "techStack": ["Python", "Scapy", "React", "Flask", "Machine Learning", "Nmap", "Socket Programming"],
+        "github": "https://github.com/roshan3101/HackTU_AI",
+        "image": "/projects/shadownet.png"
+      }      
     ] as WebProject[],
 
     mlAi: [
       {
         name: "Medical Chatbot",
-        description:
-          "RAG-based medical chatbot using LLaMA, Pinecone, and Hugging Face. Handled 14,000+ entries with 92% response accuracy.",
+        description: [
+          "RAG-based chatbot for medical queries",
+          "Integrated LLaMA with Pinecone and Hugging Face",
+          "Handled 14,000+ queries with 92% response accuracy",
+          "Optimized for low-latency and relevant answers"
+        ],
         techStack: ["Python", "Flask", "LLaMA", "Pinecone", "Hugging Face"],
-        github: "https://github.com/Igniter-909/Medical_chatbot",
+        github: "https://github.com/roshan3101/Medical_chatbot",
         image:"/projects/medical.jpeg"
       },
       {
         name: "Parking Slot Detector",
-        description: "CNN-based real-time system for detecting vacant parking slots with 99% accuracy.",
+        description: [
+          "CNN-based detection of available parking slots",
+          "99% accuracy using real-time video streams",
+          "Optimized for smart city and IoT systems"
+        ],
         techStack: ["Python", "OpenCV", "TensorFlow"],
-        github: "https://github.com/Igniter-909/Parking_slot",
+        github: "https://github.com/roshan3101/Parking_slot",
         image: "/projects/carPark.jpeg"
       },
       {
         name: "Text Summarizer using Pegasus",
-        description:
-          "Abstractive text summarizer using Pegasus achieving ROUGE-1: 0.45. Fine-tuned on domain-specific datasets.",
+        description: [
+          "Abstractive summarization using fine-tuned Pegasus model",
+          "Trained on domain-specific datasets",
+          "Achieved ROUGE-1 score of 0.45",
+          "Designed for documents, blogs, and articles"
+        ],
         techStack: ["Python", "Hugging Face", "Pegasus"],
-        github: "https://github.com/Igniter-909/text_summarizer",
+        github: "https://github.com/roshan3101/text_summarizer",
         image: "/projects/summarizer.jpeg"
       },
       {
         name: "Age and Gender Prediction",
-        description: "Real-time prediction system using CNN with 93.4% gender accuracy and age MSE of 14.53.",
+        description: [
+          "Real-time CNN model for predicting age and gender",
+          "Gender prediction accuracy of 93.4%",
+          "Mean squared error of 14.53 for age",
+          "Webcam-based inference using OpenCV"
+        ],
         techStack: ["Python", "Flask", "OpenCV"],
-        github: "https://github.com/Igniter-909/age_and_gender_prediction",
+        github: "https://github.com/roshan3101/age_and_gender_prediction",
         image:"/projects/age.jpeg"
-      },
-      {
-        name: "Student Score Predictor",
-        description: "Flask app predicting student scores based on demographics with 88% accuracy.",
-        techStack: ["Python", "Flask", "Pandas", "Sklearn"],
-        demo: "https://score-prediction-0b83.onrender.com",
-        image:"https://asset.cloudinary.com/dicfvq6fj/c4434ad567b92f9dcb666ea53386632e"
-      },
-      {
-        name: "2019 Election Analysis",
-        description:
-          "Analyzed Indian elections using Python, SQL, and Excel to derive key voter and candidate insights.",
-        techStack: ["Python", "Pandas", "Matplotlib", "SQL"],
-        github: "https://github.com/Igniter-909/2019_Election_Analysis",
-      },
+      }
     ] as MLProject[],
   },
   
@@ -209,6 +239,16 @@ export const personalData = {
 
   certifications: [
     {
+      title: "AI Accelera's 2024 Bootcamp: Generative AI, LLM Apps, AI Agents, Cursor AI",
+      provider: "AI Accelera",
+      year: 2024,
+    },
+    {
+      title: "Hitesh Choudhary - Complete Full Stack Web Development Course",
+      provider: "Hitesh Choudhary",
+      year: 2025,
+    },
+    {
       title: "Data Analytics Corporate Training",
       provider: "Jobaaj Learnings",
       year: 2024,
@@ -217,16 +257,17 @@ export const personalData = {
 
   achievements: [
     "Secured First Position in Coders' FaceOff Event at IIIT Una.",
-    "Participated in major hackathons like HackTU 5.0 (Thapar University), Electrothon (NIT Hamirpur), and several others.",
+    "Participated in major hackathons like HackTU 5.0 (Thapar University), Electrothon (NIT Hamirpur), HackTheHills (IIIT Una) and several others.",
+    "4 Star coder at CodeChef",
     "Third Position in college coding contest organized by Force Club, IIIT Una.",
-    "Active participant in Meraki and other college tech events.",
   ],
 
   socials: {
     linkedin: "https://www.linkedin.com/in/roshan-kumar-sahu-60069628a",
-    github: "https://github.com/Igniter-909",
+    github: "https://github.com/roshan3101",
     leetcode: "https://leetcode.com/u/Igniter01",
     peerlist: "https://peerlist.io/igniter",
-    portfolio: "https://www.roshan909.live",
+    portfolio: "https://main.d3jkcgtx1ye59b.amplifyapp.com",
+    resume: "https://drive.google.com/file/d/1Pk5NXCGgSIw_BtuURbFtg0lEM5riFDth/view?usp=sharing",
   } as Socials,
 }
